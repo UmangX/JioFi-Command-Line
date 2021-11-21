@@ -2,9 +2,9 @@ from bs4 import BeautifulSoup
 from os import system 
 from time import sleep 
 
+#standard location for jiofi homepage 
 system("wget 192.168.1.1")
 src = open("index.html")
-
 
 document = BeautifulSoup(src,'lxml')
 Status = document.find(attrs={"id":"connectedStatus"})
